@@ -10,7 +10,7 @@ public class HelloWorld {
 
         int width;
         int length;
-        String userInput = "no";
+        String userInput;
 
         System.out.println("Welcome to the room Calculator.");
 
@@ -26,7 +26,7 @@ public class HelloWorld {
             System.out.println("The room has a parameter of " + perimeter(width, length));
             System.out.println("The area is " + area(width, length));
 
-            System.out.print("Do you want to calculate another room? ");
+            System.out.print("Do you want to calculate another room? (yes/on)");
             userInput = sc.next();
 
         } while (userInput.equals("yes"));
