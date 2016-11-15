@@ -6,6 +6,13 @@ import java.util.Scanner;
 
 public class Methods {
 
+    // ----------- Methods exercise #3 --------------
+
+
+
+
+    // ------------ Methods exercise #2 --------------
+
     public static void main(String[] args) {
 
         int userinput;
@@ -13,26 +20,20 @@ public class Methods {
         String runFactorialCal;
 
         System.out.println("Welcome to the Factorial Calculator!");
-
         do {
             Scanner sc = new Scanner(System.in);
-
             System.out.print("Enter an integer form 1 to 20: ");
             userinput = sc.nextInt();
 
             if (userinput <= 0 || userinput > 20) {
-
                 System.out.println("Please enter a number from 1 to 20.");
 
             } else {
-
                 System.out.print(userinput + "! = ");
                 factorialStart = 1L;
 
                 for (int i = 1; i <= userinput; i++) {
-
                     factorialStart = factorialStart * i;
-
                     System.out.print(i);
 
                     if (i != userinput) {
@@ -45,16 +46,17 @@ public class Methods {
             runFactorialCal = sc.next();
 
         } while (runFactorialCal.equalsIgnoreCase("y"));
-
         System.out.println("Thank you for using the Factorial Calculator!");
 
     }
+
+    // --------------- Declared Methods for exercise #1 -----------------
 
     public static int addition(int a, int b) {
         return a + b;
     }
 
-    public static int substraction(int a, int b) {
+    public static int subtraction(int a, int b) {
         return a - b;
     }
 
