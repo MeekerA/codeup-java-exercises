@@ -9,10 +9,10 @@ public class Methods {
     public static void main(String[] args) {
 
         int userinput;
-        long factorialStart = 1L;
-        String runFactorial;
+        long factorialStart;
+        String runFactorialCal;
 
-        System.out.println("Welcome to the Factorial Calculator.");
+        System.out.println("Welcome to the Factorial Calculator!");
 
         do {
             Scanner sc = new Scanner(System.in);
@@ -27,6 +27,7 @@ public class Methods {
             } else {
 
                 System.out.print(userinput + "! = ");
+                factorialStart = 1L;
 
                 for (int i = 1; i <= userinput; i++) {
 
@@ -41,11 +42,11 @@ public class Methods {
                 System.out.println(" = " + factorialStart);
             }
             System.out.print("Do you want to calculate another Factorial? (y/n): ");
-            runFactorial = sc.next();
+            runFactorialCal = sc.next();
 
-        } while (runFactorial.equalsIgnoreCase("y"));
+        } while (runFactorialCal.equalsIgnoreCase("y"));
 
-        System.out.println("Thank you for using the Factorial Calculator.");
+        System.out.println("Thank you for using the Factorial Calculator!");
 
     }
 
