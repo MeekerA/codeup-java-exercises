@@ -10,7 +10,7 @@ public class DrivingDecision {
     }
 
     public static void main(String[] args) {
-        TrafficLightColors lightColors = TrafficLightColors.GREEN;
+        TrafficLightColors lightColors = TrafficLightColors.YELLOW;
         makeDrivingDecision(lightColors);
 
     }
