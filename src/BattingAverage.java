@@ -14,6 +14,8 @@ public class BattingAverage {
         double battingAverage;
         double sluggingPercentage;
         String userInput;
+        int[] battingRecord;
+
 
         System.out.println("Welcome to the Batting Average Calculator. ");
         Scanner sc = new Scanner(System.in);
@@ -24,7 +26,7 @@ public class BattingAverage {
 
             System.out.print("\nEnter the player's number of at-bats? ");
             totalAtBats = sc.nextInt();
-            int[] battingRecord = new int[totalAtBats];
+            battingRecord = new int[totalAtBats];
 
             for (int i = 1; i < battingRecord.length + 1; i++) {
                 System.out.print("How many bases did the batter get at-bat #" + i + " ");
@@ -42,11 +44,9 @@ public class BattingAverage {
             System.out.print("Do you want to calculate to Batting average of another player? (y/n) ");
             userInput = sc.next();
 
-        } while (userInput.equalsIgnoreCase("y"));
+        } while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
 
         sc.close();
         System.out.println("\nThank you for using the Batting Average Calculator.");
-
     }
-
 }
