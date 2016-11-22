@@ -2,45 +2,50 @@
  * Created by Austin on 11/21/16.
  */
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class BattingAverage {
 
     public static void main(String[] args) {
-        int battingNumber;
-        double sum;
+        int totalAtBats;
+        double totalHits;
+        double totalBasesEarned;
         double battingAverage;
+        double sluggingPercentage;
         String userInput;
 
-
-        System.out.println("Welcome to the Batting Average Calculator.");
+        System.out.println("Welcome to the Batting Average Calculator. ");
+        Scanner sc = new Scanner(System.in);
 
         do {
-            sum = 0;
-            battingAverage = 0;
+            totalHits = 0;
+            totalBasesEarned = 0;
 
-            Scanner sc = new Scanner(System.in);
-            System.out.print("Enter the player's number of at-bats? ");
-            battingNumber = sc.nextInt();
-            int[] battingRecord = new int[battingNumber];
+            System.out.print("\nEnter the player's number of at-bats? ");
+            totalAtBats = sc.nextInt();
+            int[] battingRecord = new int[totalAtBats];
 
             for (int i = 1; i < battingRecord.length + 1; i++) {
                 System.out.print("How many bases did the batter get at-bat #" + i + " ");
                 battingRecord[i - 1] = sc.nextInt();
-                sum += battingRecord[i - 1];
+                totalBasesEarned += battingRecord[i - 1];
+                if (battingRecord[i - 1] >= 1 ) {
+                    totalHits += 1;
+                }
             }
-            battingAverage = sum / battingRecord.length;
+            sluggingPercentage = totalBasesEarned / battingRecord.length;
+            battingAverage = totalHits / battingRecord.length;
 //        System.out.println(Arrays.toString(battingRecord));
-            System.out.println("The batting average is " + battingAverage);
+            System.out.println("\nThe Batting average is " + battingAverage + " and the Slugging Percentage is " + sluggingPercentage);
 
             System.out.print("Do you want to calculate to Batting average of another player? (y/n) ");
             userInput = sc.next();
-            sc.close();
 
         } while (userInput.equalsIgnoreCase("y"));
 
-        System.out.println("Thank you for using the Batting Average Calculator.");
+        sc.close();
+        System.out.println("\nThank you for using the Batting Average Calculator.");
 
     }
 
