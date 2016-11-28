@@ -16,7 +16,6 @@ public class BattingAverage {
         String userInput;
         int[] battingRecord;
 
-
         System.out.println("Welcome to the Batting Average Calculator. ");
         Scanner sc = new Scanner(System.in);
 
@@ -36,6 +35,7 @@ public class BattingAverage {
                     totalHits += 1;
                 }
             }
+
             sluggingPercentage = totalBasesEarned / battingRecord.length;
             battingAverage = totalHits / battingRecord.length;
 //        System.out.println(Arrays.toString(battingRecord));
