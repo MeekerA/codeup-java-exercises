@@ -1,6 +1,7 @@
 /**
  * Created by Austin on 11/28/16.
  */
+
 public class Student {
     String firstName;
     String lastName;
