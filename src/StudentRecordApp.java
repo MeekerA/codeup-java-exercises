@@ -36,8 +36,8 @@ public class StudentRecordApp {
 
         } while (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes"));
 
-        for(Student student : students) {
-            System.out.println(student.lastName + " " + student.firstName + " " + student.score);
-        }
+//        for(Student student : students) {
+//            System.out.println(student.lastName + " " + student.firstName + " " + student.score);
+//        }
     }
 }
